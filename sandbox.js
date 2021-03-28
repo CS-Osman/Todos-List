@@ -1,13 +1,17 @@
-// const button = document.querySelector('button');
+const ul = document.querySelector('ul');
 
-// button.addEventListener('click', () => {
-//  console.log('you click me');
-// });
+const button = document.querySelector('button');
+button.addEventListener('click', () => {
+    const li = document.createElement('li');
+    li.textContent = 'some new to do';
+    ul.prepend(li);
+});
 
 const items = document.querySelectorAll('li');
 
 items.forEach(item => {
-    item.addEventListener('click', e => {
-        e.target.style.textDecoration = 'line-throught';
+    item.addEventListener('click', e =>{
+        e.target.remove();
     });
 });
+
